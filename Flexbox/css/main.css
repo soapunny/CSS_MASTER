@@ -1,0 +1,38 @@
+.parent{
+    display:flex;
+    flex-direction: row;/* row -> main-axis : horizontal, column -> main-axis : vertical*/
+
+    /*main axis*/
+    justify-content: space-around;
+    align-content: space-evenly;
+    height: 100vh;
+    flex-wrap: nowrap;
+
+    /*cross axis*/
+    align-items: stretch;
+}
+
+.child {
+    color: white;
+    font-size: 30px;
+    background-color: blue;
+    display: flex;
+
+    flex-basis: 20%;
+
+    /*main axis*/
+    justify-content: center;
+
+    /*cross axis*/
+    align-items: center;
+}
+
+.child:nth-child(1){
+    background-color: antiquewhite;
+    flex-shrink: 2; /* n¹è·Î shrink(default:1) */
+}
+
+.child:nth-child(2) {
+    background-color: aqua;
+    flex-grow: 1; /* Occupy 1 out of the gross flex-grow when it grow (default 0)  */
+}

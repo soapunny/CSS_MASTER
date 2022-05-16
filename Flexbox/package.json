@@ -1,0 +1,9 @@
+{
+  "name": "flexbox",
+  "version": "0.0.0",
+  "description": "Flexbox",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}

@@ -1,0 +1,24 @@
+.grid {
+    background-color: lightcyan;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    grid-auto-rows: max-content;
+    margin-bottom: 30px;
+}
+
+div div {
+    font-size: 20px;
+}
+
+.item:nth-child(odd){
+    background-color: cadetblue;
+}
+
+.item:nth-child(even){
+    background-color: coral;
+}
+
+a{
+    font-size: 40px;
+}

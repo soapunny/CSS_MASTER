@@ -1,0 +1,47 @@
+.grid {
+    background-color: bisque;
+    display: grid;
+    grid-gap: 10px;
+    height: 100vh;
+    grid-template-rows: repeat(4, 150px);
+    grid-template-columns: repeat(4, 150px);
+    /*  justify-items: center;
+        align-items: center;*/
+    /*place-items: stretch center; y x 순*/
+
+    /*justify-content: space-evenly;
+    align-content: space-evenly;*/
+    place-content: start end;
+    margin-bottom: 30px;
+}
+
+div div {
+    display: grid;
+    color: black;
+    font-size: 30px;
+}
+
+.header {
+    background-color: darkred;
+    /*justify-self: center;
+    align-self: start;*/
+    place-self: start center;
+}
+
+.content {
+    background-color: darkorange;
+
+}
+
+.nav {
+    background-color: lightgoldenrodyellow;
+}
+
+.footer {
+    background-color: darkseagreen;
+}
+
+
+a{
+    font-size: 40px;
+}

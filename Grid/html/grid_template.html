@@ -4,40 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>grid-template-area</title>
-    <style>
-        .grid {
-            display: grid;
-            grid-template-columns: auto 200px;
-            grid-template-rows: 200px repeat(2, 400px) 200px;
-            grid-template-areas:
-                "header header header header"
-                "content content content nav"
-                "content content content nav"
-                "footer footer footer footer";
-            gap: 10px; /* column-gap: 10px; + row-gap: 10px; */
-        }
-        div div {
-            display: grid;
-            color: black;
-            font-size: 40px;
-        }
-        .header {
-            grid-area: header;
-            background-color: darkred;
-        }
-        .content {
-            grid-area: content;
-            background-color: darkorange;
-        }
-        .nav {
-            grid-area: nav;
-            background-color: lightgoldenrodyellow;
-        }
-        .footer {
-            grid-area: footer;
-            background-color: darkseagreen;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/grid_template.css"/>
 </head>
 <body>
     <div class="grid">

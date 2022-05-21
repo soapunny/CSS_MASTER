@@ -4,45 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>line_naming</title>
-    <style>
-        .grid {
-            display: grid;
-            grid-template-columns: [first-line] 100px [second-line] 200px [third-line] 300px [fourth-line] 100px [fifth-line];
-            grid-template-rows: repeat(4, 200px [row-line]);
-            grid-gap: 10px
-        }
-
-        div div {
-            display: grid;
-            color: black;
-            font-size: 40px;
-        }
-
-        .header {
-            background-color: darkred;
-            /*  grid-column-start   : 1;
-                grid-column-end     : 5;
-                -1 -> end
-            */
-            grid-column: first-line / -1;
-        }
-
-        .content {
-            background-color: darkorange;
-            grid-row: row-line 1 / row-line 3;
-            grid-column: first-line / fourth-line;
-        }
-
-        .nav {
-            background-color: lightgoldenrodyellow;
-            grid-row: row-line 1 / row-line 3;
-        }
-
-        .footer {
-            background-color: darkseagreen;
-            grid-column: first-line / fifth-line;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/line_naming.css"/>
 </head>
 <body>
     <div class="grid">

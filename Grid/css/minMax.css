@@ -1,0 +1,35 @@
+.grid {
+    background-color: lightcyan;
+    display: grid;
+    grid-gap: 10px;
+    height: 30vh;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 30px;
+}
+
+div div {
+    display: grid;
+    font-size: 30px;
+}
+
+.item:nth-child(odd){
+    background-color: cadetblue;
+}
+
+.item:nth-child(even){
+    background-color: coral;
+}
+
+.grid:first-child{
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.grid:second-child{
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+a{
+    font-size: 40px;
+}

@@ -1,0 +1,11 @@
+
+.parent {
+    display: flex;
+}
+
+.child {
+    background-color: orange;
+    flex-basis: 300px;
+    color: white;
+    font-size: 40px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>GRID</title>
+    <!--<link href="/css/main.css" rel="stylesheet" type="text/css" />-->
+    <style>
+        .parent {
+            display: grid;
+            grid-template-columns: 250px;
+            grid-template-rows: repeat(10, 100px);
+            gap: 10px; /* column-gap: 10px; + row-gap: 10px; */
+        }
+        .child {
+            display: grid;
+            background-color: orange;
+            color: white;
+            font-size: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"><a href="/group">grid template group</a></div>
+        <div class="child"><a href="/auto">auto</a></div>
+        <div class="child"><a href="/line">line naming</a></div>
+        <div class="child"><a href="/fraction">fraction</a></div>
+        <div class="child"><a href="/items">items</a></div>
+        <div class="child"><a href="/autoColumns">autoColumns</a></div>
+        <div class="child"><a href="/minMax">minMax</a></div>
+        <div class="child"><a href="/minMaxContent">minMaxContent</a></div>
+    </div>
+</body>
+</html>

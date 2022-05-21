@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Min Max</title>
+    <style>
+        .grid {
+            background-color: lightcyan;
+            display: grid;
+            grid-gap: 10px;
+            height: 30vh;
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        div div {
+            display: grid;
+            font-size: 30px;
+        }
+
+        .item:nth-child(odd){
+            background-color: cadetblue;
+        }
+
+        .item:nth-child(even){
+            background-color: coral;
+        }
+
+        .grid:first-child{
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+        }
+
+        .grid:second-child{
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+        }
+
+        a{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    auto-fill
+    <div class="grid">
+        <!--div 빠른 생성 단축 .item*20{$}-->
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div><br>
+
+    auto-fit
+    <div class="grid">
+        <!--div 빠른 생성 단축 .item*20{$}-->
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div><br>
+    <a href="/">Back</a>
+</body>
+</html>

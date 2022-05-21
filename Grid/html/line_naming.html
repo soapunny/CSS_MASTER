@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>line_naming</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: [first-line] 100px [second-line] 200px [third-line] 300px [fourth-line] 100px [fifth-line];
+            grid-template-rows: repeat(4, 200px [row-line]);
+            grid-gap: 10px
+        }
+
+        div div {
+            display: grid;
+            color: black;
+            font-size: 40px;
+        }
+
+        .header {
+            background-color: darkred;
+            /*  grid-column-start   : 1;
+                grid-column-end     : 5;
+                -1 -> end
+            */
+            grid-column: first-line / -1;
+        }
+
+        .content {
+            background-color: darkorange;
+            grid-row: row-line 1 / row-line 3;
+            grid-column: first-line / fourth-line;
+        }
+
+        .nav {
+            background-color: lightgoldenrodyellow;
+            grid-row: row-line 1 / row-line 3;
+        }
+
+        .footer {
+            background-color: darkseagreen;
+            grid-column: first-line / fifth-line;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="header">header</div>
+        <div class="content">content</div>
+        <div class="nav">nav</div>
+        <div class="footer">footer</div>
+    </div>
+    <a href="/">Back</a>
+</body>
+</html>

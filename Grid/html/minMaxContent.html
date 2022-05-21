@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Min Max</title>
+    <style>
+        .grid {
+            background-color: lightcyan;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+            grid-auto-rows: max-content;
+            margin-bottom: 30px;
+        }
+
+        div div {
+            font-size: 20px;
+        }
+
+        .item:nth-child(odd){
+            background-color: cadetblue;
+        }
+
+        .item:nth-child(even){
+            background-color: coral;
+        }
+
+        a{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <!--div 빠른 생성 단축 .classname*n{$}-->
+        <div class="item">min max 1</div>
+        <div class="item">min max longer 2</div>
+        <div class="item">min max longer longer 3</div>
+        <div class="item">min max longer longer longer 4</div>
+        <div class="item">min max longer longer longer longer 5</div>
+        <div class="item">min max longer longer longer longer longer 6</div>
+    </div><br>
+    <a href="/">Back</a>
+</body>
+</html>

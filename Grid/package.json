@@ -1,0 +1,9 @@
+{
+  "name": "grid",
+  "version": "0.0.0",
+  "description": "Grid",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}

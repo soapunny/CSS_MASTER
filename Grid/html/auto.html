@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>auto</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-template-rows: 200px repeat(2, 400px) 200px;
+            grid-gap: 10px
+        }
+
+        div div {
+            display: grid;
+            color: black;
+            font-size: 40px;
+        }
+
+        .header {
+            background-color: darkred;
+            /*  grid-column-start   : 1;
+                grid-column-end     : 5;
+                -1 -> end
+            */
+            grid-column: 1 / -1;
+        }
+
+        .content {
+            background-color: darkorange;
+            /* grid-row-start   : 2;
+               grid-row-end     : 4;*/
+            grid-row: 2 / -2;
+            grid-column: span 3;
+        }
+
+        .nav {
+            background-color: lightgoldenrodyellow;
+            grid-row: span 2;
+        }
+
+        .footer {
+            background-color: darkseagreen;
+            grid-column: span 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="header">header</div>
+        <div class="content">content</div>
+        <div class="nav">nav</div>
+        <div class="footer">footer</div>
+    </div>
+    <a href="/">Back</a>
+</body>
+</html>

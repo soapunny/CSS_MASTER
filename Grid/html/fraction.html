@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>fraction</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-gap: 10px;
+            height: 90vh; /*100% of my screen*/
+            /*
+            grid-template-columns: repeat(4, 1fr); 1fr in column == 1 / total grid of column 
+            grid-template-rows: repeat(4, 1fr); to use the fr in row, we need the height of the grid
+            */
+            grid-template:
+                /* You can use [] naming or not */
+                [header-start] "header header header header" 1fr [header-end]
+                [content-start] "content content content nav" 2fr [content-end]
+                [footer-start] "footer footer footer footer" 1fr [footer-end]/*row size*/
+                 / 1fr 1fr 1fr 1fr;/*column size*/
+        }
+
+        div div {
+            display: grid;
+            color: black;
+            font-size: 40px;
+        }
+
+        .header {
+            background-color: darkred;
+            grid-area: header;
+        }
+
+        .content {
+            background-color: darkorange;
+            grid-area: content;
+        }
+
+        .nav {
+            background-color: lightgoldenrodyellow;
+            grid-area: nav;
+        }
+
+        .footer {
+            background-color: darkseagreen;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="header">header</div>
+        <div class="content">content</div>
+        <div class="nav">nav</div>
+        <div class="footer">footer</div>
+    </div>
+    <a href="/">Back</a>
+</body>
+</html>

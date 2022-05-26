@@ -1,0 +1,119 @@
+.Header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minMax(max-content, 100px) 1fr minMax(max-content, 100px);
+      grid-template-columns: minMax(-webkit-max-content, 100px) 1fr minMax(-webkit-max-content, 100px);
+      grid-template-columns: minMax(max-content, 100px) 1fr minMax(max-content, 100px);
+  -ms-grid-rows: minMax(10vh, max-content);
+      grid-template-rows: minMax(10vh, -webkit-max-content);
+      grid-template-rows: minMax(10vh, max-content);
+  font-size: 52px;
+  font-weight: bold;
+  background-color: antiquewhite;
+}
+
+.Header .menu {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.Header .menu:hover {
+  background-color: chocolate;
+}
+
+.Header .title {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.Header .title:hover {
+  color: chocolate;
+}
+
+.Header .login {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.Header .login:hover {
+  background-color: chocolate;
+}
+
+.content {
+  background-color: cornflowerblue;
+  display: -ms-grid;
+  display: grid;
+  height: 80vh;
+  color: black;
+  -ms-grid-columns: (minMax(max-content, 1fr))[2];
+      grid-template-columns: repeat(2, minMax(-webkit-max-content, 1fr));
+      grid-template-columns: repeat(2, minMax(max-content, 1fr));
+  -ms-grid-rows: (minMax(max-content, 1fr))[autofit];
+      grid-template-rows: repeat(autofit, minMax(-webkit-max-content, 1fr));
+      grid-template-rows: repeat(autofit, minMax(max-content, 1fr));
+  gap: 10px;
+  /* column-gap: 10px; + row-gap: 10px; */
+}
+
+.content .contentA {
+  place-items: center;
+  background-color: #e7473c;
+  display: -ms-grid;
+  display: grid;
+  font-size: 40px;
+}
+
+.content .contentA a {
+  text-decoration: none;
+}
+
+.content .contentA a:visited {
+  color: black;
+}
+
+.content .contentA a:hover {
+  color: white;
+}
+
+.content .contentB {
+  place-items: center;
+  background-color: orange;
+  display: -ms-grid;
+  display: grid;
+  font-size: 40px;
+}
+
+.content .contentC {
+  place-items: center;
+  background-color: yellow;
+  display: -ms-grid;
+  display: grid;
+  font-size: 40px;
+}
+
+.content .contentD {
+  place-items: center;
+  background-color: green;
+  display: -ms-grid;
+  display: grid;
+  font-size: 40px;
+}
+
+.footer {
+  background-color: antiquewhite;
+  display: -ms-grid;
+  display: grid;
+  height: 10vh;
+}
+
+.footer .copyright {
+  place-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  font-size: 20px;
+}

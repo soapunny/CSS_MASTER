@@ -1,0 +1,39 @@
+@import "_variables";
+@import "_mixins";
+@import "_extends";
+
+body{
+    background-color: black;
+
+    h1{
+        @include horrorTitle();
+        @include responsive("iphone"){
+            color: yellow;
+        }
+        @include responsive("tablet"){
+            font-size: 80px;
+        }
+        @include responsive("pc"){
+            color: green;
+        }
+    }
+
+    .box{
+        margin-top: 20px;
+        h2{
+            font-size: 32px;
+            color: white;
+            &:hover{
+                color: $bloodyRed;
+            }
+        }
+
+        button{
+            //@extend %button;
+            //@include colorBtn(white, $bloodyRed);
+            @include responsive('iphone'){
+                text-decoration: none;
+            }
+        }
+    }
+}

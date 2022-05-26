@@ -1,0 +1,51 @@
+@mixin horrorTitle{
+    margin-bottom: 12px;
+    font-size: 42px;
+    color: white;
+    &:hover{
+        color: $bloodyRed;
+    }
+}
+
+@mixin colorBtn($beforeColor, $afterColor){
+    background-color: $beforeColor;
+    &:hover{
+        background-color: $afterColor;
+    }
+}
+
+@mixin contentItem($type, $bg){
+    place-items: center;
+    background-color: $bg;
+    display: grid;
+    font-size: 40px;
+    @if $type == "a" {
+        a {
+            text-decoration: none;
+            &:visited{
+                color: black;
+            }
+            &:hover{
+                color: white;
+            }
+        }
+    }@else{
+
+    }
+}
+
+@mixin responsive($device) {
+    @if $device == 'iphone'{
+        @media screen and (min-width: $minIphoneWidth) and (max-width: $maxIphoneWidth) {
+            @content;   
+        }
+    } @else if $device == 'tablet'{
+        @media screen and (min-width: $minTabletWidth) and (max-width: $maxTabletWidth) {
+            @content;
+        }
+    } @else{
+        @media screen and (min-width: $maxTabletWidth) and (max-width: 1920px) and (orientation: landscape){
+            @content;
+        }
+    }
+}

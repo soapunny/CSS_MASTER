@@ -1,0 +1,65 @@
+@import "_variables";
+@import "_mixins";
+
+.Header {
+    display: grid;
+    grid-template-columns: minMax(max-content, 100px) 1fr minMax(max-content, 100px);
+    grid-template-rows: minMax(10vh, max-content);
+    font-size: 52px;
+    font-weight: bold;
+    background-color: antiquewhite;
+
+    .menu{
+        display: grid;
+        place-items: center;
+        &:hover{
+            background-color: chocolate;
+        }
+    }
+    .title{
+        display: grid;
+        place-items: center;
+        &:hover{
+            color: chocolate;
+        }
+    }
+    .login{
+        display: grid;
+        place-items: center;
+        &:hover{
+            background-color: chocolate;
+        }
+    }
+}
+.content {
+    background-color: cornflowerblue;
+    display: grid;
+    height: 80vh;
+    color: black;
+    grid-template-columns: repeat(2, minMax(max-content, 1fr));
+    grid-template-rows: repeat(autofit, minMax(max-content, 1fr));
+    gap: 10px; /* column-gap: 10px; + row-gap: 10px; */
+    .contentA{
+        @include contentItem("a", $bloodyRed);
+    }
+    .contentB {
+        @include contentItem("", orange);
+    }
+    .contentC{
+        @include contentItem("", yellow);
+    }
+    .contentD{
+        @include contentItem("", green);
+    }
+}
+.footer{
+    background-color: antiquewhite;
+    display: grid;
+    height: 10vh;
+    .copyright{
+        place-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        font-size: 20px;
+    }
+}

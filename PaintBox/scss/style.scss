@@ -262,79 +262,44 @@ main{
 
 footer{
     background-color: $box_color;
-    @include responsible(0px, 1099px){
-        height: max-content;
-    }
-    @include responsible(1100px, 5000px){
-        height: max-content;
-    }
+    height: max-content;
+    
     .footer_section{
         height: 0.8fr;
-        display: grid;
+        display: flex;
+        @include responsible(0px, 1099px){
+            flex-direction: column;
+        }
+        @include responsible(1100px, 5000px){
+            flex-direction: row;
+        }
+        padding-left: 5%;
         align-items: center;
-        grid-template-columns: 50px repeat(3, minMax(max-content, 1fr)) 50px;
-        grid-template-rows: 1fr 4fr 1fr;
         text-align: center;
     
-        .support{
-            grid-column: 2 / 3;
-            grid-row: 2 / 3;
-            border-right: 1px solid black;
-            h4{
-                opacity: 0.4;
-                font-size: 12px;
-                padding-bottom: 1rem;
-            }
-            div{
-                padding-bottom: 1rem;
-                font-size: 12px;
-                a{
-                    color: black;
-                    text-decoration: none;
-                    &:hover{
-                        cursor: pointer;
-                    }
-                    &:visited{
-                        text-decoration: none;
-                    }
+        section{
+            @include responsible(0px, 1099px){
+                width: 90%;
+                &:not(:nth-child(3)){
+                    border-bottom: 1px solid black;
                 }
             }
-        }
-        .sns{
-            grid-column: 3 / 4;
-            grid-row: 2 / 3;
-            border-right: 1px solid black;
-            h4{
-                opacity: 0.4;
-                font-size: 12px;
-                padding-bottom: 1rem;
-            }
-            div{
-                padding-bottom: 1rem;
-                font-size: 12px;
-                a{
-                    color: black;
-                    text-decoration: none;
-                    &:hover{
-                        cursor: pointer;
-                    }
-                    &:visited{
-                        text-decoration: none;
-                    }
+            @include responsible(1100px, 5000px){
+                width: 30%;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                &:not(:last-child){
+                    border-right: 1px solid black;
                 }
             }
-        }
-        .about_us{
-            grid-column: 4/ 5;
-            grid-row: 2 / 3;
             h4{
                 opacity: 0.4;
-                font-size: 12px;
+                font-size: 1rem;
                 padding-bottom: 1rem;
             }
             div{
                 padding-bottom: 1rem;
-                font-size: 12px;
+                font-size: 1rem;
                 a{
                     color: black;
                     text-decoration: none;

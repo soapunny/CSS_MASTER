@@ -422,136 +422,81 @@ main .main_bottom div a:hover {
 
 footer {
   background-color: #F3EDE8;
-}
-
-@media screen and (min-width: 0px) and (max-width: 1099px) {
-  footer {
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-  }
-}
-
-@media screen and (min-width: 1100px) and (max-width: 5000px) {
-  footer {
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-  }
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 footer .footer_section {
   height: 0.8fr;
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 5%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-columns: 50px (minMax(max-content, 1fr))[3] 50px;
-      grid-template-columns: 50px repeat(3, minMax(-webkit-max-content, 1fr)) 50px;
-      grid-template-columns: 50px repeat(3, minMax(max-content, 1fr)) 50px;
-  -ms-grid-rows: 1fr 4fr 1fr;
-      grid-template-rows: 1fr 4fr 1fr;
   text-align: center;
 }
 
-footer .footer_section .support {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
-  border-right: 1px solid black;
+@media screen and (min-width: 0px) and (max-width: 1099px) {
+  footer .footer_section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
-footer .footer_section .support h4 {
+@media screen and (min-width: 1100px) and (max-width: 5000px) {
+  footer .footer_section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1099px) {
+  footer .footer_section section {
+    width: 90%;
+  }
+  footer .footer_section section:not(:nth-child(3)) {
+    border-bottom: 1px solid black;
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 5000px) {
+  footer .footer_section section {
+    width: 30%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  footer .footer_section section:not(:last-child) {
+    border-right: 1px solid black;
+  }
+}
+
+footer .footer_section section h4 {
   opacity: 0.4;
-  font-size: 12px;
+  font-size: 1rem;
   padding-bottom: 1rem;
 }
 
-footer .footer_section .support div {
+footer .footer_section section div {
   padding-bottom: 1rem;
-  font-size: 12px;
+  font-size: 1rem;
 }
 
-footer .footer_section .support div a {
+footer .footer_section section div a {
   color: black;
   text-decoration: none;
 }
 
-footer .footer_section .support div a:hover {
+footer .footer_section section div a:hover {
   cursor: pointer;
 }
 
-footer .footer_section .support div a:visited {
-  text-decoration: none;
-}
-
-footer .footer_section .sns {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3 / 4;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
-  border-right: 1px solid black;
-}
-
-footer .footer_section .sns h4 {
-  opacity: 0.4;
-  font-size: 12px;
-  padding-bottom: 1rem;
-}
-
-footer .footer_section .sns div {
-  padding-bottom: 1rem;
-  font-size: 12px;
-}
-
-footer .footer_section .sns div a {
-  color: black;
-  text-decoration: none;
-}
-
-footer .footer_section .sns div a:hover {
-  cursor: pointer;
-}
-
-footer .footer_section .sns div a:visited {
-  text-decoration: none;
-}
-
-footer .footer_section .about_us {
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 1;
-  grid-column: 4/ 5;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
-}
-
-footer .footer_section .about_us h4 {
-  opacity: 0.4;
-  font-size: 12px;
-  padding-bottom: 1rem;
-}
-
-footer .footer_section .about_us div {
-  padding-bottom: 1rem;
-  font-size: 12px;
-}
-
-footer .footer_section .about_us div a {
-  color: black;
-  text-decoration: none;
-}
-
-footer .footer_section .about_us div a:hover {
-  cursor: pointer;
-}
-
-footer .footer_section .about_us div a:visited {
+footer .footer_section section div a:visited {
   text-decoration: none;
 }

@@ -1,0 +1,99 @@
+@import "_variables";
+@import "_extends";
+@import "_mixins";
+
+body{
+    background-color: $main_color;
+    color: $sub_color;
+    font-weight: $title_font_weight;
+    font-size: $title_font_size;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 100vw;
+    height : 100vh;
+
+    a{
+        @extend %a_style_none;
+    }
+    section div{
+        @extend %draw_border;
+        @extend %hover_effect;
+    }
+
+    .left{
+        display: grid;
+        height: 100%;
+        grid-template-rows: 1fr 5fr 1fr;
+        grid-template-columns: 1fr;
+
+        .logo{
+            display: grid;
+            place-items: center;
+        }
+        .content_list{
+            display: flex;
+            flex-direction: column-reverse;
+            flex-wrap: nowrap;
+            .content_item{
+                
+                display: grid;
+                place-items: center;
+                height: 20%;
+            }
+        }
+        .prev{
+            display: grid;
+            place-items: center;
+        }
+    }
+
+    .middle{
+        display: grid;
+        height: 100%;
+        grid-template-rows: 1fr 5fr 1fr;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        .title{
+            display: grid;
+            place-items: center;
+        }
+        .image{
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .commercial{
+            display: grid;
+            place-items: center;
+        }
+    }
+
+    .right{
+        display: grid;
+        height: 100%;
+        grid-template-rows: 1fr 5fr 1fr;
+        grid-template-columns: 1fr;
+        .menu{
+            
+            display: grid;
+            place-items: center;
+        }
+        .content_list{
+            display: flex;
+            flex-direction: column-reverse;
+            flex-wrap: nowrap;
+            .content_item{
+                display: grid;
+                place-items: center;
+                height: 20%;
+            }
+        }
+        .next{
+            display: grid;
+            place-items: center;
+        }
+    }
+
+}

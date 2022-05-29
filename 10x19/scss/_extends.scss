@@ -1,0 +1,20 @@
+%draw_border{
+    border-right: 1px solid $sub_color;
+    border-bottom: 1px solid $sub_color;
+}
+
+%hover_effect{
+    &:hover{
+        background-color: $sub_color;
+        transition: background-color 0.3s linear;
+        & > a{
+            color: $main_color;
+        }
+        cursor: pointer;
+    }   
+}
+
+%a_style_none{
+    color: $sub_color;
+    text-decoration: none;
+}

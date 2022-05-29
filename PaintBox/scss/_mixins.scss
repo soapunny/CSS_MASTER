@@ -1,0 +1,25 @@
+@mixin a_border($type){
+    @if $type == "a"{
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        padding-top: 15px;
+        padding-bottom:15px;
+        transition: color 0.3s linear, background-color 0.3s linear;
+        color: black;
+        text-decoration: none;
+        &:hover{
+            background-color: $hover_color;
+            color: white;
+        }
+        &:visited{
+            text-decoration: none;
+        }
+    }
+}
+
+@mixin responsible($minWidth, $maxWidth){
+    @media screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        @content;
+    }
+}

@@ -1,16 +1,11 @@
-body section div {
-  border-right: 1px solid #af7832;
-  border-bottom: 1px solid #af7832;
-}
-
-body section div:hover {
+body section div:hover:not(.commercial) {
   background-color: #af7832;
-  -webkit-transition: background-color 0.3s linear;
-  transition: background-color 0.3s linear;
+  -webkit-transition: color 0.3s linear, background-color 0.3s linear;
+  transition: color 0.3s linear, background-color 0.3s linear;
   cursor: pointer;
 }
 
-body section div:hover > a {
+body section div:hover:not(.commercial) > a {
   color: #FFFFFF;
 }
 
@@ -20,7 +15,10 @@ body a {
 }
 
 body {
-  background-color: #FFFFFF;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  gap: 1px;
+  background-color: #af7832;
   color: #af7832;
   font-weight: 500;
   font-size: 2rem;
@@ -34,7 +32,16 @@ body {
   height: 100vh;
 }
 
+body > section {
+  padding: 0 0 0 0;
+}
+
+body section div {
+  background-color: #FFFFFF;
+}
+
 body .left {
+  gap: 1px;
   display: -ms-grid;
   display: grid;
   height: 100%;
@@ -51,6 +58,7 @@ body .left .logo {
 }
 
 body .left .content_list {
+  gap: 1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,16 +84,13 @@ body .left .prev {
 }
 
 body .middle {
+  gap: 1px;
   display: -ms-grid;
   display: grid;
-  height: 100%;
   -ms-grid-rows: 1fr 5fr 1fr;
       grid-template-rows: 1fr 5fr 1fr;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 body .middle .title {
@@ -94,18 +99,62 @@ body .middle .title {
   place-items: center;
 }
 
+body .middle .image {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  place-items: stretch;
+}
+
 body .middle .image img {
   width: 100%;
-  height: 100%;
 }
 
 body .middle .commercial {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   place-items: center;
+  overflow: hidden;
+}
+
+body .middle .commercial p {
+  white-space: nowrap;
+  -webkit-animation-name: commercial;
+          animation-name: commercial;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes commercial {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes commercial {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
 }
 
 body .right {
+  gap: 1px;
   display: -ms-grid;
   display: grid;
   height: 100%;
@@ -122,6 +171,7 @@ body .right .menu {
 }
 
 body .right .content_list {
+  gap: 1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -3,7 +3,10 @@
 @import "_mixins";
 
 body{
-    background-color: $main_color;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    gap: 1px;
+    background-color: $sub_color;
     color: $sub_color;
     font-weight: $title_font_weight;
     font-size: $title_font_size;
@@ -11,17 +14,23 @@ body{
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 2fr 1fr;
     width: 100vw;
-    height : 100vh;
+    height: 100vh;
 
+    & > section{
+        padding: 0 0 0 0;
+    }
     a{
         @extend %a_style_none;
     }
     section div{
-        @extend %draw_border;
-        @extend %hover_effect;
+        background-color: $main_color;
+        &:not(.commercial) {
+            @extend %hover_effect;
+        }
     }
 
     .left{
+        gap: 1px;
         display: grid;
         height: 100%;
         grid-template-rows: 1fr 5fr 1fr;
@@ -32,6 +41,7 @@ body{
             place-items: center;
         }
         .content_list{
+            gap: 1px;
             display: flex;
             flex-direction: column-reverse;
             flex-wrap: nowrap;
@@ -49,38 +59,57 @@ body{
     }
 
     .middle{
+        gap: 1px;
         display: grid;
-        height: 100%;
         grid-template-rows: 1fr 5fr 1fr;
         grid-template-columns: 1fr;
-        justify-content: center;
+        
         .title{
             display: grid;
             place-items: center;
         }
         .image{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            place-items: stretch;
             img{
                 width: 100%;
-                height: 100%;
             }
         }
         .commercial{
-            display: grid;
+            display: flex;
             place-items: center;
+            overflow: hidden;
+            p{
+                white-space: nowrap;
+                animation-name: commercial;
+                animation-duration: 15s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                @keyframes commercial {
+                    from{
+                        transform: translateX(100%)
+                    }
+                    to{
+                        transform: translateX(-100%);
+                    }
+                }
+            }
         }
     }
 
     .right{
+        gap: 1px;
         display: grid;
         height: 100%;
         grid-template-rows: 1fr 5fr 1fr;
         grid-template-columns: 1fr;
         .menu{
-            
             display: grid;
             place-items: center;
         }
         .content_list{
+            gap: 1px;
             display: flex;
             flex-direction: column-reverse;
             flex-wrap: nowrap;

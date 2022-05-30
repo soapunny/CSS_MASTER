@@ -6,7 +6,7 @@
 %hover_effect{
     &:hover{
         background-color: $sub_color;
-        transition: background-color 0.3s linear;
+        transition: color 0.3s linear, background-color 0.3s linear;
         & > a{
             color: $main_color;
         }

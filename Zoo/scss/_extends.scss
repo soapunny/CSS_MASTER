@@ -1,0 +1,10 @@
+%set_header_font{
+    font-size: $header_font_size;
+    font-weight: $header_font_weight;
+}
+
+%set_header_hover{
+    background-color: $hover_color;
+    cursor: pointer;
+    transition: background-color 0.3s linear;
+}

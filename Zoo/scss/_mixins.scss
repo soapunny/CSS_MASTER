@@ -1,0 +1,15 @@
+@mixin responsive($device_size){
+    @if $device_size == 'phone'{
+        @media screen and (min-width: 0px) and (max-width: 599px) {
+            @content;
+        }
+    }@else if $device_size == 'tablet'{
+        @media screen and (min-width: 600px) and (max-width: 899px) {
+            @content;
+        }
+    }@else{
+        @media screen and (min-width: 900px) and (max-width: 10000px) and (orientation: landscape){
+            @content;
+        }
+    }
+}

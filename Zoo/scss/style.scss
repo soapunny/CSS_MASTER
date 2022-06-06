@@ -1,0 +1,124 @@
+@import "_variables";
+@import "_extends";
+@import "_mixins";
+
+body{
+    background-color: $main_color;
+    width: 98vw;
+    height: 100vh;
+    margin-left: 0px;
+    margin-right: 0px;
+    
+    header{
+        background-color: $main_color;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 5vh;
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        padding: 0 0 0 0;
+        z-index:100;
+
+        .left_menu{
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 1fr;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            @extend %set_header_font;
+            &:hover{
+                @extend %set_header_hover;
+                .menu{
+                    color: $main_color;
+                }
+            }
+
+            .logo{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                color: $text_color1;
+            }
+            .menu{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                color: $text_color2
+            }
+        }
+        .right_menu{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            @extend %set_header_font;
+            align-items: center;
+            &:hover{
+                @extend %set_header_hover;
+            }
+            .work{
+                justify-self: center;
+            }
+            .all{
+                justify-self: center;
+            }
+
+            .language{
+                font-size: $main_font_size;
+                align-self: flex-end;
+                justify-self: flex-end;
+            }
+        }
+    }
+
+    main{
+        padding-top: 5vh;
+        display: grid;
+        width: 100%;
+        @include responsive("phone"){
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(auto, 30%);
+        }
+        @include responsive("tablet"){
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(auto, 30%);
+        }
+        @include responsive("pc"){
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(auto, 30%);
+        }
+        .artwork{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding-bottom: 0.5rem;
+            &:hover{
+                cursor: pointer;
+            }
+
+            .artwork_img{
+                img{
+                    width: 100%;
+                }
+            }
+            .artwork_title{
+                justify-self: center;
+                padding-left: 0.8rem;
+                @include responsive("phone"){
+                    font-size: 1.8rem;
+                }
+                @include responsive("tablet"){
+                    font-size: 1.35rem;
+                }
+                @include responsive("pc"){
+                    font-size: 0.9rem;
+                }
+                font-weight: bold;
+            }
+        }
+    }
+}

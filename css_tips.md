@@ -7,7 +7,7 @@
 </ul>
 <br><br>
 
-<h4># 애니메이션(animation)</h4>
+<h4># 애니메이션(Animation)</h4>
 <pre>
   <code>@keyframes first_animation {
         from{

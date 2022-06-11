@@ -1,15 +1,21 @@
-@mixin responsive($device_size){
-    @if $device_size == 'phone'{
-        @media screen and (min-width: 0px) and (max-width: 599px) {
+@mixin responsive($device_size){ 
+    @media screen and (min-width: 0px) and (max-width: 599px) and (orientation: portrait){
+        @if $device_size == 'phone'{
             @content;
         }
-    }@else if $device_size == 'tablet'{
-        @media screen and (min-width: 600px) and (max-width: 899px) {
+    }
+    @media screen and (min-width: 600px) and (max-width: 899px) {
+        @if $device_size == 'tablet'{
             @content;
         }
-    }@else{
-        @media screen and (min-width: 900px) and (max-width: 10000px) and (orientation: landscape){
+    }
+    @media screen and (min-width: 900px){
+        @if $device_size == 'pc'{
             @content;
         }
     }
 }
+
+//media query orientation
+//  portrait: height is greater than or equal to width.
+//  landscape: width is greater than the height.
